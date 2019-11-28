@@ -23,6 +23,13 @@ $(document).ready(function(){
     }
 convertAMPM();
 
+function timeColors(){
 
+}
+
+
+var saveBtn = $()
+
+funciton getlocalStorage()
 })
 
