@@ -26,21 +26,37 @@ convertAMPM();
 function timeColors(){
     var currentTime = new Date ().getHours();
     for (var i = 9; i < 18;i ++){
-        console.log(currentTime, $('${i})').data("time"));
-        if ($('$i')).data("time")== currentTime){
+        console.log(currentTime, $('$#{i})').data("time"));
+        if ($('#${i}').data("time")== currentTime){
             $('#text${i}').addClass("present");
         }
-        else if (currentTime < $('${i}').data("time"){
+        else if (currentTime < $('$#{i}').data("time")){
             $('#text${i}').addClass("future");
         }
      
     }
 
+
 }
 
+setInterval(function() {
+    timeColors();
+}, 1000);
 
-var saveBtn = $()
 
-funciton getlocalStorage()
-})
+var saveBtn = $(".saveBtn");
+saveBtn.on('click',function(){
+    let eventID=$(this).attr('id');
+    let eventText=$(this).parent().siblings().children('.description').val();
+    localStorage.setItem(eventId, eventText);
+
+    function getLocalStorage(){
+        let value =loclStorage.getItem();
+        if (value){
+            $('#text').text(value);
+        }
+    }
+    }
+
+});});
 
