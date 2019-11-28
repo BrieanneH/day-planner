@@ -56,7 +56,7 @@ saveBtn.on('click',function(){
             $('#text').text(value);
         }
     }
-    }
+}
 
 });});
 
